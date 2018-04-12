@@ -1,0 +1,25 @@
+.organizations {
+  .refreshBtn {
+    margin-left: 20px;
+  }
+  .idCol {
+    width: 33%;
+  }
+  .nameCol {
+    width: 33%;
+  }
+  .buttonCol {
+    width: 33%;
+    :global(.btn) {
+      margin: 0 5px;
+    }
+  }
+  tr.saving {
+    opacity: 0.8;
+    :global(.btn) {
+      &[disabled] {
+        opacity: 1;
+      }
+    }
+  }
+}
