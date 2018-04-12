@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: /opt/brandbastion/bb-customerplatform_fe
+permissions:
+   - object: /opt/brandbastion/bb-customerplatform_fe
+     pattern: "**"
+     owner: root
+     group: root
+     mode: 755
+     type:
+       - file
+hooks:
+  AfterInstall:
+    - location: deploy/aws/launch.sh
+      runas: root
